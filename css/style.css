@@ -74,10 +74,12 @@ nav a:hover {
   position: fixed;
   inset: 0;
   background: #0f172a;
-  z-index: 9999;
-  transform: scaleY(0);
+  opacity: 0;
   pointer-events: none;
+  z-index: 9999;
 }
+
+
 
 
 @keyframes pageFade {
@@ -171,6 +173,7 @@ nav a:hover {
 /* TEAM */
 .team-card {
   text-align: center;
+  cursor: pointer;
 }
 
 .avatar {
