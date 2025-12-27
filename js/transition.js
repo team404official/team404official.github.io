@@ -1,20 +1,28 @@
 const overlay = document.querySelector(".page-overlay");
 const links = document.querySelectorAll("a");
 
+// Page enter
+window.addEventListener("load", () => {
+  gsap.to(overlay, {
+    opacity: 0,
+    duration: 0.3,
+    ease: "power1.out"
+  });
+});
+
+// Page exit
 links.forEach(link => {
   link.addEventListener("click", e => {
     const href = link.getAttribute("href");
 
-    // Allow external links
-    if (href.startsWith("http") || href.startsWith("#")) return;
+    if (!href || href.startsWith("#") || href.startsWith("http")) return;
 
     e.preventDefault();
 
     gsap.to(overlay, {
-      scaleY: 1,
-      transformOrigin: "bottom",
-      duration: 0.6,
-      ease: "power4.inOut",
+      opacity: 1,
+      duration: 0.3,
+      ease: "power1.in",
       onComplete: () => {
         window.location.href = href;
       }
@@ -22,16 +30,6 @@ links.forEach(link => {
   });
 });
 
-// Animate overlay out on page load
-gsap.fromTo(
-  overlay,
-  { scaleY: 1, transformOrigin: "top" },
-  {
-    scaleY: 0,
-    duration: 0.6,
-    ease: "power4.inOut"
-  }
-);
 
 gsap.from(".team-card", {
   scrollTrigger: {
@@ -57,4 +55,31 @@ gsap.from(".member-section", {
   duration: 0.8,
   stagger: 0.2,
   ease: "power3.out"
+});
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const teamCards = document.querySelectorAll(".team-card");
+
+  teamCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const targetSelector = card.dataset.target;
+      const target = document.querySelector(targetSelector);
+
+      if (!target) {
+        console.error("Target not found:", targetSelector);
+        return;
+      }
+
+      gsap.to(window, {
+        scrollTo: {
+          y: target,
+          offsetY: 100
+        },
+        duration: 1,
+        ease: "power3.inOut"
+      });
+    });
+  });
 });
