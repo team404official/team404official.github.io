@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team 404</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="matrixCanvas"></canvas>
+
+<!-- CYBER BACKGROUND -->
+<div class="cyber-bg">
+  <canvas id="particles"></canvas>
+</div>
+
+<!-- NAVBAR (same as other pages) -->
+<nav class="cyber-navbar">
+  <div class="nav-logo glitch" data-text="404">404</div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="glitch-link active" data-text="HOME">HOME</a></li>
+    <li><a href="team.html" class="glitch-link" data-text="TEAM">TEAM</a></li>
+    <li><a href="projects.html" class="glitch-link" data-text="PROJECTS">PROJECTS</a></li>
+    <li><a href="contact.html" class="glitch-link" data-text="CONTACT">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero glitch-section">
+  <h1 class="glitch-title" data-text="TEAM 404">TEAM 404</h1>
+  <p class="hero-sub">
+    We build cyber-grade web, systems & experiences.
+  </p>
+
+  <div class="hero-actions">
+    <a href="projects.html" class="glitch-btn" data-text="VIEW PROJECTS">VIEW PROJECTS</a>
+    <a href="contact.html" class="glitch-btn" data-text="CONTACT US">CONTACT US</a>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="home-section glitch-section">
+  <h2 class="section-title">WHAT WE DO</h2>
+
+  <div class="home-grid">
+    <div class="home-card">
+      <i class="fas fa-code"></i>
+      <h3>Web Development</h3>
+      <p>Modern, scalable, cyber-themed web applications.</p>
+    </div>
+
+    <div class="home-card">
+      <i class="fas fa-shield-halved"></i>
+      <h3>Cyber Systems</h3>
+      <p>Security-focused tools & system-level projects.</p>
+    </div>
+
+    <div class="home-card">
+      <i class="fas fa-brain"></i>
+      <h3>AI & Automation</h3>
+      <p>Smart automation & intelligent workflows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="home-section glitch-section">
+  <h2 class="section-title">FEATURED PROJECTS</h2>
+
+  <div class="home-grid">
+    <a id="team404" href="projects.html#team404" class="project-link">
+    <div class="glitch-card project">
+        <h3>Team 404 Website</h3>
+        <p class="role">Cyber Web App</p>
+    </div>
+    </a>
+    <a id="keylogger" href="projects.html#keylogger" class="project-link">
+    <div class="glitch-card project">
+        <h3>Keylogger (Edu)</h3>
+        <p class="role">Cyber Security</p>
+    </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>READY TO COLLABORATE?</h2>
+  <a href="contact.html" class="glitch-btn" data-text="INITIATE CONTACT">
+    INITIATE CONTACT
+  </a>
+</section>
+<button id="matrixToggle" class="matrix-toggle">
+  MATRIX MODE
+</button>
+<footer class="cyber-footer glitch-section">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h3 class="glitch" data-text="TEAM 404">TEAM 404</h3>
+      <p>Building cyber-grade digital experiences.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>NAVIGATION</h4>
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-socials">
+      <h4>CONNECT</h4>
+      <div class="social-icons">
+        <a href="https://github.com/team404official" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/team.4o4/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:contact.team04040@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Team 404</span>
+    <span class="footer-status">SYSTEM STATUS: ONLINE</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

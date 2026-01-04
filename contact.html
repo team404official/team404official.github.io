@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Team 404</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+<!-- CYBER BACKGROUND -->
+<div class="cyber-bg">
+  <canvas id="particles"></canvas>
+</div>
+<!-- NAVBAR (same as other pages) -->
+<nav class="cyber-navbar">
+  <div class="nav-logo glitch" data-text="404">404</div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="glitch-link" data-text="HOME">HOME</a></li>
+    <li><a href="team.html" class="glitch-link" data-text="TEAM">TEAM</a></li>
+    <li><a href="projects.html" class="glitch-link" data-text="PROJECTS">PROJECTS</a></li>
+    <li><a href="contact.html" class="glitch-link active" data-text="CONTACT">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section glitch-section">
+
+  <h2 class="glitch-title" data-text="CONTACT">CONTACT</h2>
+  <p class="contact-subtitle">
+    Reach out to Team 404 — collaborations, projects, or just to say hi.
+  </p>
+
+  <!-- CONTACT CARDS -->
+  <div class="contact-grid">
+
+    <a class="contact-card" href="mailto:contact.team04040@gmail.com">
+      <i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <p>contact.team04040@gmail.com</p>
+    </a>
+
+    <a class="contact-card" href="https://github.com/" target="_blank">
+      <i class="fab fa-github"></i>
+      <h3>GitHub</h3>
+      <p>github.com/team404</p>
+    </a>
+
+    <a class="contact-card" href="https://www.instagram.com/team.4o4/" target="_blank">
+      <i class="fab fa-instagram"></i>
+      <h3>Instagram</h3>
+      <p>Team 404</p>
+    </a>
+
+  </div>
+
+  <!-- CONTACT FORM -->
+<form class="contact-form" id="contactForm">
+  <input type="text" name="from_name" placeholder="Your Name" required>
+
+  <input type="email" name="from_email" placeholder="Your Email" required>
+
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+  <button type="submit" class="glitch-btn" data-text="SEND MESSAGE">
+    SEND MESSAGE
+  </button>
+    <!-- Honeypot (anti-spam) -->
+    <input
+    type="text"
+    name="company"
+    id="company"
+    autocomplete="off"
+    tabindex="-1"
+    class="honeypot"
+    />
+
+</form>
+</section>
+<div id="toast" class="glitch-toast">
+  <span class="toast-title">SYSTEM</span>
+  <span class="toast-message">MESSAGE TRANSMITTED</span>
+</div>
+<button id="matrixToggle" class="matrix-toggle">
+  MATRIX MODE
+</button>
+
+<footer class="cyber-footer glitch-section">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h3 class="glitch" data-text="TEAM 404">TEAM 404</h3>
+      <p>Building cyber-grade digital experiences.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>NAVIGATION</h4>
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-socials">
+      <h4>CONNECT</h4>
+      <div class="social-icons">
+        <a href="https://github.com/team404official" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/team.4o4/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:contact.team04040@gmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> Team 404</span>
+    <span class="footer-status">SYSTEM STATUS: ONLINE</span>
+  </div>
+</footer>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "KQe6NR9a2Hw4OqK_G",
+      });
+   })();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
